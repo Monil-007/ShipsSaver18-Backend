@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const passport = require("passport");
 
-const CLIENT_URL = "http://localhost:3001/welcome";
+const CLIENT_URL = "https://shipsaver18-frontend.onrender.com/welcome";
 
 router.get("/login/success", (req, res) => {
     console.log("displaying name:" + req.user.displayName);
@@ -27,7 +27,7 @@ router.get("/login/failed", (req, res) => {
 
 router.get("/logout", (req, res) => {
     req.logout();
-    res.redirect('http://localhost:3001/dashboard');
+    res.redirect('https://shipsaver18-frontend.onrender.com/dashboard');
 });
 
 router.get("/google", passport.authenticate("google", { scope: ["profile"] }));

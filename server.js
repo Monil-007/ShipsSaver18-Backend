@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(
     cors({
-        origin: ["http://localhost:3001", "https://shipsaver.onrender.com"],
+        origin: ["http://localhost:3001", "https://shipsaver18-frontend.onrender.com", "https://shipsaver18-backend.onrender.com"],
         methods: "GET,POST,PUT,DELETE",
         credentials: true,
     })
@@ -27,7 +27,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(
     cors({
-        origin: "http://localhost:3001",
+        origin: ["http://localhost:3001", "https://shipsaver18-frontend.onrender.com", "https://shipsaver18-backend.onrender.com"],
         methods: "GET,POST,PUT,DELETE",
         credentials: true,
     })
