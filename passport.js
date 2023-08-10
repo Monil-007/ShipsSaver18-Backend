@@ -10,14 +10,13 @@ passport.use(
         {
             clientID: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-            callbackURL: "/auth/google/callback",
+            callbackURL: "https://shipsaver18-backend.onrender.com/auth/google/callback",
         },
         function (accessToken, refreshToken, profile, done) {
             done(null, profile);
         }
     )
 );
-
 passport.use(
     new GithubStrategy(
         {
@@ -30,7 +29,6 @@ passport.use(
         }
     )
 );
-
 passport.use(
     new TwitterStrategy(
         {
