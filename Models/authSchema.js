@@ -9,6 +9,9 @@ const AuthSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
+    },
+    uniqueToken: {
+        type: String,
     }
 });
 

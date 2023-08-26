@@ -53,5 +53,4 @@ app.use("/authManual", authManualRoute);
 
 app.listen(3000, async function (req, res) {
     await connectDB();
-
 });
